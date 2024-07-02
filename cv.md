@@ -1,5 +1,5 @@
-# Dina
-Front-end developer
+# Nina Porolonova
+Front-end JavaScript Developer
 
 ## Contacts
-**telegram** t.me/dina-js
+**X** [twitter.com/nesralatut](https://twitter.com/nesralatut)
