@@ -6,7 +6,6 @@ html {
 
 body {
   margin: 0 auto;
-  max-width: 1280px;
   background-color: #f4f4f4;
   color: #333;
 }
@@ -17,8 +16,8 @@ header {
   align-items: center;
   background-color: #333;
   color: #fff;
-  padding: 1rem 0;
-  text-align: center;
+  margin-bottom: 1rem;
+  padding: 1rem;
 }
 
 .title {
@@ -30,25 +29,42 @@ header {
   list-style: none;
   padding: 0;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .navigation-link {
   color: #fff;
   text-decoration: none;
   margin: 0 1rem;
-  font-size: 1.1rem;
+  padding: 0.2rem;
+  border-radius: 0.2rem;
+  transition: 0.2s;
 }
 
 .navigation-link:hover {
-  text-decoration: underline;
+  color: #333;
+  background-color: #f4f4f4;
+}
+
+main {
+  max-width: 980px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .section {
+  width: 40%;
   padding: 2rem;
   background-color: #fff;
-  margin: 1rem 0;
+  margin: 1rem;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#about {
+  width: 100%;
 }
 
 .subtitle {
@@ -58,7 +74,7 @@ header {
 
 .about-content {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .photo {
@@ -67,7 +83,7 @@ header {
 }
 
 .profile {
-  min-width: 360px;
+  padding: 0 20px;
 }
 
 .name {
@@ -93,7 +109,6 @@ pre {
   background-color: #f4f4f4;
   padding: 1rem;
   border-radius: 4px;
-  overflow-x: auto;
 }
 
 code {
@@ -107,17 +122,52 @@ footer {
   align-items: center;
   background-color: #333;
   color: #fff;
-  padding: 1rem 0;
-}
-
-.github {
-  color: #fff;
+  padding: 1rem;
+  margin-top: 1rem;
 }
 
 .logo {
   display: block;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   background-image: url('rs_school_js.svg');
   background-size: contain;
+  transition: 0.5s;
+}
+
+.logo:nth-child(1) {
+  background-image: url('github-mark-white.png');
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 1000px) {
+  .title {
+    display: none;
+  }
+
+  .navigation-list {
+    justify-content: space-around;
+  }
+
+  .section {
+    width: 80%;
+  }
+
+  .about-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .name,
+  .job {
+    margin: 1rem 0;
+    text-align: center;
+  }
+
+  code {
+    font-size: 0.75rem;
+  }
 }
